@@ -1,0 +1,102 @@
+@use "../../app.scss";
+.contact{
+  height: 100vh;
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  gap: 90px;
+  padding-left: 100px;
+  margin: 0;
+  align-items: center;
+  @mixin mobile{
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+    gap: 0px;
+  }
+  .textContainer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @mixin mobile{
+      gap: 10px;
+      text-align: center;
+      align-items: center;
+      margin-top: 70px;
+
+    }
+    h1{
+      font-size: 100px;
+      line-height: 88px;
+      @mixin mobile{
+        font-size: 36px;
+      }
+    }
+    span{
+      font-weight: 300;
+    }
+  }
+  .formContainer{
+    flex: 1;
+    position: relative;
+    
+    @mixin mobile{
+      padding: 50px;
+      width: 100%;
+    }
+    .phoneSvg{
+      stroke: orange;
+      position: absolute;
+      margin: auto;
+
+      svg{
+        height: 480px;
+        width: 480px;
+        @mixin mobile{
+          height: 300px;
+          width: 300px;
+         }
+      }
+     
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      input,textarea{
+        padding:20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+        @mixin mobile{
+          padding: 10px;
+          
+        }
+       
+      }
+      button:hover{
+        color: white;
+        transition: all 0.7s;
+        background-color: #0c0c1d ;
+        box-shadow: 2px 2px 5px white;
+      }
+    
+      button{
+        transition: all 0.7s;
+        padding: 20px;
+        border: none;
+        background-color: orange;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: 500;
+       
+        @mixin mobile{
+          padding: 10px;
+        }
+      }
+    }
+   
+  }
+}

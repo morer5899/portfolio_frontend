@@ -1,0 +1,101 @@
+@use "../../app.scss";
+.hero{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,#0c0c1d,#111132);
+  overflow: hidden;
+  position: relative;
+  @mixin mobile{
+    height: calc(100vh - 70px);
+  }
+  .wrapper{
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .textContainer{
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+      text-align: center;
+      @mixin mobile{
+        height: 50%;
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+      }
+      h2{
+        font-size: 30px;
+        font-weight: 900;
+        color: rebeccapurple;
+        letter-spacing: 10px;
+        z-index: 10000;
+        @mixin mobile{
+          font-size: 36px;
+          font-weight: 300;
+        }
+      }
+      h1{
+        font-size: 88px;
+        font-weight: 600;
+        @mixin mobile{
+          font-size: 36px;
+          font-weight: 300;
+        }
+      }
+      .buttons{
+
+        button{
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          margin-right: 20px;
+          cursor: pointer;
+          color: white;
+          font-weight: 300;
+        }
+      }
+      .image{
+        height: 30px;
+        width: 30px;
+      
+      }
+    }
+  }
+  .imageContainer{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    
+    @mixin mobile{
+      height: 50%;
+      width: 100%;
+     bottom: 0;
+     top: unset;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .slidingTextContainer{
+    position: absolute;
+    color: #ffffff09;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space:nowrap ;
+    width: 50%;
+    font-weight: bold;
+    z-index: 1000;
+  }
+}

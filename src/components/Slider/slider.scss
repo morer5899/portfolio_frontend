@@ -1,0 +1,117 @@
+@use "../../app.scss";
+.banner{
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+
+ 
+  .slider{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 15%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform:perspective(1000px);
+    animation: autoRun 20s linear infinite ;
+    z-index: 100;
+    
+    .item{
+      position: absolute;
+      inset: 0 0 0 0;
+      width: 200px;
+      height: 150px;
+      border-radius: 10px;
+      box-shadow: 1px 2px 5px black;
+      transform:rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+      @mixin mobile{
+        height: 120px;
+        width: 140px;
+        transform:rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(200px) ;
+      }
+      img{
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @mixin mobile{
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  .content{
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translate(-50%);
+    width: min(1400px,100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @mixin mobile{
+      flex-direction: column;
+      bottom: 100px;
+     }
+
+    h2{
+      font-size: 3em;
+      @mixin mobile{
+        font-size: 2em;
+      }
+    }
+
+    h1{
+      font-size: 13em;
+      line-height: 1em;
+      color: transparent;
+      position: relative;
+      
+      @mixin mobile{
+        font-size: 8em;
+        color: gray;
+      }
+    }
+
+    h1::after{
+      position: absolute;
+      inset: 0 0 0 0;
+      content: attr(data-content);
+      z-index: 10;
+      -webkit-text-stroke: 2px darkslateblue;
+      color: transparent;
+      @mixin mobile{
+        -webkit-text-stroke: 0;
+      }
+    }
+    .author{
+      font-family: Poppins;
+      text-align: right;
+      max-width: 200px;
+    }
+  }
+}
+
+@keyframes autoRun {
+  from{
+    transform: perspective(1000px) rotateX(-9deg) rotateY(0deg);
+  }to{
+    transform: perspective(1000px) rotateX(-9deg) rotateY(360deg);
+  }
+}
+
+@mixin mobile{
+  @keyframes autoRun {
+    from{
+      transform: perspective(1000px) rotateX(-9deg) rotateY(0deg);
+    }to{
+      transform: perspective(1000px) rotateX(-9deg) rotateY(360deg);
+    }
+  }
+}
