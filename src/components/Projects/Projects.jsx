@@ -52,19 +52,18 @@ const Portfolio = () => {
   });
   return (
     <div className="portfolio" ref={ref}>
-      {items.map((item) => {
-        return <Single item={item} key={item.id} />;
-      })}
-      <div className="progress">
+    <div className="progress">
         <h1 className="header">Featured Works</h1>
         <motion.div
           style={{ scaleX: scaleX }}
           className="progressBar"
         ></motion.div>
       </div>
-      <section id="Contact">
-        <Contact/>
-      </section>
+    {items.map((item) => {
+        return <Single item={item} key={item.id} />;
+      })}
+ 
+     
     </div>
   );
 };

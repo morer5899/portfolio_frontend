@@ -14,9 +14,8 @@
     z-index: 999;
     left: 0;
     bottom:0;
-    width: 400px;
+    width: 60%;
     background-color: white;
-    margin-left: -10px;
     height: 100%;
     @mixin mobile{
       width: 200px;

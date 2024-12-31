@@ -2,7 +2,7 @@ import Parallax from "./components/parallax/Parallax";
 import "./app.scss";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/hero/Hero";
-
+import Contact from "./components/contact/Contact";
 import Projects from "./components/Projects/Projects";
 import Cursor from "./components/cursor/Cursor";
 import Slider from "./components/Slider/Slider";
@@ -20,10 +20,18 @@ const App = () => {
           <Slider />
         </section>
         <section id="Projects" type="Projects">
-        <Parallax type="Projects" />  
-      </section> 
-        <section id="Projects">
-          <Projects />
+          <Parallax type="Projects" />
+        </section>
+        <div>
+          <section id="Projects">
+            <Projects />
+          </section>
+        </div>
+        <section id="Contacts" type="Projects">
+          <Parallax type="Contacts" />
+        </section>
+        <section>
+          <Contact />
         </section>
       </div>
     </div>

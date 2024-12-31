@@ -1,21 +1,24 @@
-@use "../../app.scss";
-.hero{
+@import "../../app.scss"; 
+.hero {
   height: 100%;
   width: 100%;
-  background: linear-gradient(180deg,#0c0c1d,#111132);
+  background: linear-gradient(180deg, #0c0c1d, #111132);
   overflow: hidden;
   position: relative;
-  @mixin mobile{
-    height: calc(100vh - 70px);
+
+  @include mobile {
+    height: 100%;
   }
-  .wrapper{
+
+  .wrapper {
     max-width: 1366px;
     height: 100%;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    .textContainer{
+
+    .textContainer {
       width: 50%;
       height: 100%;
       display: flex;
@@ -23,35 +26,42 @@
       justify-content: center;
       gap: 40px;
       text-align: center;
-      @mixin mobile{
+
+      @include mobile {
         height: 50%;
         width: 100%;
         gap: 20px;
         align-items: center;
         text-align: center;
       }
-      h2{
+
+      h2 {
         font-size: 30px;
         font-weight: 900;
         color: rebeccapurple;
         letter-spacing: 10px;
         z-index: 10000;
-        @mixin mobile{
+
+        
+        @include mobile {
           font-size: 36px;
+          z-index: 1;
           font-weight: 300;
         }
       }
-      h1{
+
+      h1 {
         font-size: 88px;
         font-weight: 600;
-        @mixin mobile{
+        @include mobile {
           font-size: 36px;
           font-weight: 300;
+        
         }
       }
-      .buttons{
 
-        button{
+      .buttons {
+        button {
           padding: 20px;
           border: 1px solid white;
           border-radius: 10px;
@@ -62,38 +72,42 @@
           font-weight: 300;
         }
       }
-      .image{
+
+      .image {
         height: 30px;
         width: 30px;
-      
       }
     }
   }
-  .imageContainer{
+
+  .imageContainer {
     height: 100%;
     width: 50%;
     position: absolute;
     top: 0;
     right: 20px;
-    
-    @mixin mobile{
+
+    // Use mobile inc@include for mobile-specific styles
+    @include mobile {
       height: 50%;
       width: 100%;
-     bottom: 0;
-     top: unset;
+      bottom: 0;
+      top: unset;
     }
-    img{
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-  .slidingTextContainer{
+
+  .slidingTextContainer {
     position: absolute;
     color: #ffffff09;
     font-size: 50vh;
     bottom: -120px;
-    white-space:nowrap ;
+    white-space: nowrap;
     width: 50%;
     font-weight: bold;
     z-index: 1000;

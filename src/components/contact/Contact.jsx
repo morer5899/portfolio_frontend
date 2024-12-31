@@ -22,7 +22,8 @@ const Contact = () => {
     name:"",
     email:"",
     message:""
-  })
+  });
+  const [focus,setFocus]=useState(false);
   const chanheHandler=(e)=>{
     setData({...data,[e.target.name]:e.target.value});
   }
@@ -64,7 +65,6 @@ const Contact = () => {
           <h2>Address</h2>
           <span>Mumbai</span>
         </motion.div>
-       
       </motion.div>
       
       <div className="formContainer">
@@ -75,7 +75,7 @@ const Contact = () => {
           onSubmit={submitHandler}
           id="contact-form"
         >
-          <input type="text" placeholder="name" name="name" onChange={chanheHandler} value={data.name} id="name" />
+          <input type="text" placeholder="name" name="name" onChange={chanheHandler} value={data.name} id="name"/>
           <input type="email" placeholder="email" name="email" value={data.email} onChange={chanheHandler} id="email"/>
           <textarea rows={8} placeholder="Message" value={data.message} name="message" onChange={chanheHandler} id="textbox"/>
           <button type="submit" id="submit-btn">submit</button>

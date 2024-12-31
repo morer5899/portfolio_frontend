@@ -1,4 +1,4 @@
-@use "../../app.scss";
+@import "../../app.scss";
 .contact{
   height: 100vh;
   max-width: 1366px;
@@ -8,72 +8,79 @@
   padding-left: 100px;
   margin: 0;
   align-items: center;
-  @mixin mobile{
-    width: 100%;
-    flex-direction: column;
-    padding: 10px;
-    gap: 0px;
-  }
+ @include mobile{
+  max-width: 0;
+  min-width: 100vw;
+  gap: 10px;
+  max-height: 100vh;
+  flex-direction: column;
+
+  padding: 0;
+  padding-top: 50px;
+  justify-content: space-around;
+ }
   .textContainer{
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    @mixin mobile{
-      gap: 10px;
-      text-align: center;
+    @include mobile{
+      flex: 0.5;
+      gap: 30px;
       align-items: center;
-      margin-top: 70px;
-
+      height: 100px;
+    }
+    .item{
+      @include mobile{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      }
     }
     h1{
       font-size: 100px;
       line-height: 88px;
-      @mixin mobile{
-        font-size: 36px;
-      }
+     @include mobile{
+      font-size: 50px;
+      line-height: 40px;
+      text-align: center;
+     
+     }
     }
     span{
       font-weight: 300;
     }
   }
+
   .formContainer{
     flex: 1;
     position: relative;
+    @include mobile{
+      flex: 0;
+    }
     
-    @mixin mobile{
-      padding: 50px;
-      width: 100%;
-    }
-    .phoneSvg{
-      stroke: orange;
-      position: absolute;
-      margin: auto;
-
-      svg{
-        height: 480px;
-        width: 480px;
-        @mixin mobile{
-          height: 300px;
-          width: 300px;
-         }
-      }
-     
-    }
+    
     form{
       display: flex;
       flex-direction: column;
       gap: 20px;
+      width: 500px;
+      @include mobile{
+        width: 300px;
+      }
       input,textarea{
         padding:20px;
         background-color: transparent;
         border: 1px solid white;
+        width: 100%;
         color: white;
         border-radius: 5px;
-        @mixin mobile{
-          padding: 10px;
-          
-        }
+       @include mobile{
+        width: 100%;
+       font-size: 1em;
+       }
+      
        
       }
       button:hover{
@@ -91,12 +98,10 @@
         cursor: pointer;
         border-radius: 5px;
         font-weight: 500;
-       
-        @mixin mobile{
-          padding: 10px;
-        }
+     
       }
     }
    
   }
 }
+
