@@ -31,7 +31,7 @@ const Contact = () => {
     e.preventDefault();
     try {
 
-      const response=await axios.post("https://portfolio-backend-pdxv.onrender.com/user/sendEmail",data,{
+      const response=await axios.post("user/sendEmail",data,{
         headers:{
           "Content-Type":"application/json",
         },
