@@ -62,9 +62,6 @@ const Portfolio = () => {
           className="progressBar"
         ></motion.div>
       </div>
-      <section id="Contact">
-        <Contact/>
-      </section>
     </div>
   );
 };
