@@ -1,4 +1,4 @@
-@use "../../app.scss";
+@import "../../app.scss";
 .sidebar{
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
     width: 60%;
     background-color: white;
     height: 100%;
-    @mixin mobile{
+    @include mobile{
       width: 200px;
     }
     .links{
@@ -32,9 +32,8 @@
     
       a{
         font-size: 40px;
-        
-        @mixin mobile{
-          font-size: 20px;
+        @include mobile{
+          font-size: 25px;
         }
       }
     }

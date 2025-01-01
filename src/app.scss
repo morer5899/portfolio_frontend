@@ -41,3 +41,9 @@ section{
     @content;
   }
 }
+
+@include mobile{
+  // #Projects{
+  //   height: calc(100vh - 10%);
+  // }
+}

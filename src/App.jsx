@@ -22,12 +22,12 @@ const App = () => {
         <section id="Projects" type="Projects">
           <Parallax type="Projects" />
         </section>
-        <div>
+       
           <section id="Projects">
             <Projects />
           </section>
-        </div>
-        <section id="Contacts" type="Projects">
+       
+        <section id="Contact" type="Projects">
           <Parallax type="Contacts" />
         </section>
         <section>

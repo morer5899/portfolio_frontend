@@ -47,23 +47,24 @@ const Portfolio = () => {
     offset: ["end end", "start start"],
   });
   const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
+    stiffness: 200,
+    damping: 40,
   });
   return (
-    <div className="portfolio" ref={ref}>
-    <div className="progress">
+     <div className="portfolio" ref={ref}>
+      {items.map((item) => {
+        return <Single item={item} key={item.id} />;
+      })}
+      <div className="progress">
         <h1 className="header">Featured Works</h1>
         <motion.div
           style={{ scaleX: scaleX }}
           className="progressBar"
         ></motion.div>
       </div>
-    {items.map((item) => {
-        return <Single item={item} key={item.id} />;
-      })}
- 
-     
+      <section id="Contact">
+        <Contact/>
+      </section>
     </div>
   );
 };

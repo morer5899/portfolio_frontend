@@ -1,17 +1,21 @@
 @import "../../app.scss";
 .portfolio {
-  height: 100%;
-
   position: relative;
+  height: 100%;
   overflow: hidden;
+  @include mobile{
+    height: calc(100% - 2%);
+  }
   .progress {
     position: sticky;
-    top: 20px;
+    bottom: calc(100vh - 15%);
     text-align: center;
     color: orange;
     font-size: 36px;
+  
+  
     @include mobile{
-      top: calc(100% - 80px) ;
+      bottom: 10px;
       font-size: 24px;
     }
     .progressBar {
@@ -23,14 +27,17 @@
   .container {
     display: flex;
     justify-content: center;
-  
+    
+    
     align-items: center;
     width: 100%;
-    height: calc(100% - 11%);
+    height: 100%;
     overflow: hidden;
     padding-top: 50px;
     padding-bottom: 50px;
-
+    @include mobile{
+      height: calc(100% - 2%);
+    }
     .wrapper {
       max-width: 1366px;
       height: 100%;
@@ -41,15 +48,15 @@
       gap: 50px;
       @include mobile{
         flex-direction: column;
-
+        padding-bottom: 40px;
       }
       .imageContainer{
         flex: 1;
         height: 50%;
         width: 50%;
         @include mobile{
-          width: 300px;
-          height: 300px;
+          width: 200px;
+          height: 100px;
         }
         img {
           width: 100%;
