@@ -33,26 +33,9 @@ const Single = ({ item ,Link}) => {
             <h2>{item.title}</h2>
             <p className="disciption">{item.desc}</p>
             <button 
-  onClick={() => window.open(Link, "_blank", "noopener,noreferrer")} 
-  style={{
-    all: "unset",
-    padding: "10px 20px",
-    borderRadius: "5px",
-    border: "2px solid #007bff",
-    cursor: "pointer",
-    fontSize: "16px",
-    fontWeight: "bold",
-    textAlign: "center",
-    display: "inline-block",
-    transition: "all 0.3s ease-in-out",
-    backgroundColor: "#007bff",
-    color: "#fff"
-  }}
-  onMouseEnter={(e) => e.target.style.backgroundColor = "#0056b3"}
-  onMouseLeave={(e) => e.target.style.backgroundColor = "#007bff"}
->
-  See Demo
-</button>
+              onClick={() => window.open(Link, "_blank", "noopener,noreferrer")}>
+                  See Demo
+            </button>
 
           </motion.div>
         </div>
