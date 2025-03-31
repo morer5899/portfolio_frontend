@@ -3,7 +3,6 @@ import "./projects.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import item1 from "../../assets/register.png";
 import Contact from "../contact/Contact";
-import { useNavigate } from "react-router-dom";
 
 const items = [
   {
@@ -17,7 +16,6 @@ const items = [
 
 
 const Single = ({ item ,Link}) => {
-  const navigate = useNavigate();
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -34,7 +32,9 @@ const Single = ({ item ,Link}) => {
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p className="disciption">{item.desc}</p>
-            <button onClick={()=>navigate(Link)}>See Demo</button>
+            <button><a href={Link} style={{ textDecoration: "none", cursor: "pointer" }}>
+                      See Demo </a>
+            </button>
           </motion.div>
         </div>
       </div>
