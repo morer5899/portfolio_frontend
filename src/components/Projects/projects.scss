@@ -103,14 +103,25 @@
             font-size: 16px;
           }
         }
-        button{
-          background-color: orange;
-          border-radius: 10px;
-          border: none;
-          padding: 10px;
-          cursor: pointer;
-          width: 200px;
-        }
+       
+         button:hover{
+        color: white;
+        transition: all 0.7s;
+        background-color: #0c0c1d ;
+        box-shadow: 2px 2px 5px white;
+      }
+    
+      button{
+        transition: all 0.7s;
+        padding: 10px;
+        cursor: pointer;
+        width: 200px;
+        border: none;
+        background-color: orange;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: 500;
+      }
       }
     }
   }
