@@ -10,6 +10,7 @@ const items = [
     id: 1,
     title: "authentication and authorization",
     img: item1,
+    link:"https://authentication-frontend-dusky.vercel.app",
     desc: "This MERN stack project implements robust user authentication and authorization. Users can securely sign up and log in using JWT-based authentication. Authorization ensures access control by assigning roles and permissions. A Forgot Password feature allows users to reset their password via email verification. The project also includes secure password verification using bcrypt for hashing and comparing passwords, ensuring sensitive user data remains protected. The backend is built with Node.js and Express, while MongoDB handles the database. The frontend, developed in React, provides a seamless user interface. This project follows best practices for security and scalability in modern web applications."
   },
 ];
@@ -53,7 +54,7 @@ const Portfolio = () => {
   return (
      <div className="portfolio" ref={ref}>
       {items.map((item) => {
-        return <Single item={item} key={item.id} />;
+        return <Single item={item} key={item.id} Link={item.link}/>;
       })}
       <div className="progress">
         <h1 className="header">Featured Works</h1>
