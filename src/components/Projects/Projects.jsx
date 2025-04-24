@@ -11,6 +11,12 @@ const items = [
     img: item1,
     link:"https://authentication-frontend-dusky.vercel.app",
     desc: "This MERN stack project implements robust user authentication and authorization. Users can securely sign up and log in using JWT-based authentication. Authorization ensures access control by assigning roles and permissions. A Forgot Password feature allows users to reset their password via email verification. The project also includes secure password verification using bcrypt for hashing and comparing passwords, ensuring sensitive user data remains protected. The backend is built with Node.js and Express, while MongoDB handles the database. The frontend, developed in React, provides a seamless user interface. This project follows best practices for security and scalability in modern web applications."
+  },  {
+    id: 2,
+    title: "file and image transformation",
+    img: item2,
+    link:"https://visioncrafter.vercel.app",
+    desc: "This MERN-based website offers a powerful suite of AI-driven tools for image processing and file management. Key features include background remover for clean cutouts, image enhancer for improved quality and resolution, file format changer supporting popular image conversions, and an image compressor that reduces file size without losing clarity. Built with MongoDB, Express.js, React.js, and Node.js, the platform ensures a responsive user experience with fast, real-time processing. Users can upload, preview, and download files seamlessly through an intuitive interface. Designed for creatives and professionals alike, this all-in-one solution simplifies and streamlines image editing and optimization tasks."
   },
 ];
 
