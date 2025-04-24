@@ -3,7 +3,8 @@ import "./projects.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import item1 from "../../assets/register.png";
 import Contact from "../contact/Contact";
-import item2 from "../../assets/visioncrafter.png";
+import item2 from "../../assets/register.png";
+
 const items = [
   {
     id: 1,
