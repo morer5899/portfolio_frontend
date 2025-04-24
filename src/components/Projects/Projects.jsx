@@ -4,7 +4,6 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import item1 from "../../assets/register.png";
 import Contact from "../contact/Contact";
 import item2 from "../../assets/visioncrafter.png";
-
 const items = [
   {
     id: 1,
